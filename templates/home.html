@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regex</title>
+    <link href="../static/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <div style="display:flex;justify-content: center;">
+        <h1>RegexMaster</h1>
+    </div>
+    <div style="display: flex;">
+    <div class='box'>
+        <form action="/result" method="post">
+            <div class="line">
+                <!-- <label for="pattern" >Pattern</label> -->
+                <input type='text' name="pattern" placeholder="enter the pattern">
+                <!-- <label for ='string'>Text</label> -->
+
+                <button type="submit"> Submit</button>
+            </div>
+            <div class="line">
+                <textarea cols="50" name="string"  placeholder="enter the text"></textarea>
+            </div>
+        </form>
+        <h2>Email Validator</h2>
+        <form action="/email_validate" method="post">
+            <div class="line">
+                <input type='text' name="email" placeholder="enter the email">
+                <button type="submit"> Validate</button>
+            </div>
+            {%if message %}
+            <div class="line">
+                {%if email_valid %}
+                <div class="valid message">
+                    <p> Valid </p>
+                </div>
+                {%else%}
+                <div class="not_valid message">
+                    <p> Not Valid </p>
+                </div>
+                {%endif%}
+            </div>
+            {%endif%}
+        </form>
+    </div>
+    <div class="box">
+        <div id="input_logs">
+
+            <h3>Regex:</h3>
+            <p>{{pattern}}</p>
+            <h3>Text:</h3>
+            <pre>{% for highlighted , part ,count in text %}{% if highlighted == 'h' %}{%if count % 2 == 0 %}<span class="even">{{part}}</span>{%else%}<span class="odd">{{part}}</span>{%endif%}{%else%}{{part}}{%endif%}{%endfor%}</pre>
+            
+        </div>
+        <table>
+            <tr>
+                <th>
+                    S.No
+                </th>
+                <th>
+                    Position
+                </th>
+                <th>
+                    Matches
+                </th>
+            </tr>
+            {% for match in matches %}
+            <tr>
+                <td>
+                    {{loop.index}}
+                </td>
+                <td>
+                    {{match[1] , match[2]}}
+                </td>
+                <td>
+                    {{match[0]}}
+                </td>
+            </tr>
+            {%endfor%}
+        </table>
+
+    </div>
+    
+</div>
+</body>
+
+</html>

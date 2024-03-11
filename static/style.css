@@ -1,0 +1,130 @@
+body{
+    background-image: linear-gradient(-90deg, #bcb2d4 0%, #ffbeed 100%);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, Helvetica, sans-serif;
+    
+  
+}
+h1 , h2 , h3{ 
+    color: rgb(71, 71, 71);
+
+}
+
+textarea{
+    min-height: 150px;
+    width: 46vw;
+    padding: 10px;
+    border: 1.5px solid white;
+    border-radius: 5px;
+    background-color: rgba(255,255,255,0.8);
+    margin-top: 5px;
+
+
+}
+::placeholder{
+    /* font-family: 'Times New Roman', Times, serif; */
+    font-family: Arial, Helvetica, sans-serif
+}
+
+input{
+    width: 80%;
+    height: 40px;
+    margin-bottom: 5px;
+    padding-inline: 10px;
+    border: 1.5px solid white;
+    border-radius: 5px;
+    background-color: rgba(255,255,255,0.8);
+    /* font-family: 'Times New Roman', Times, serif; */
+
+}
+
+button{
+    height: 45px;
+    width: 95px;
+    background-image: linear-gradient(120deg, #f093fb 0%, #f5576c 100%);
+    border: 1.5px solid white;
+    border-radius: 5px;
+    color: white;
+    /* font-family: 'Times New Roman', Times, serif; */
+}
+
+.box{
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+
+    /* background-color: beige; */
+    margin: 5px;
+    padding: 10px;
+    justify-content: start; 
+
+}
+
+form{
+    /* background-color: blue; */
+    display: flex;
+    /* flex: 1; */
+    flex-direction: column;
+    justify-content: start;
+    align-items: stretch;
+    padding: 2px;
+}
+th{
+    color: rgb(71, 71, 71);
+    text-align: left;
+}
+
+
+table{
+    margin-top: 0px;
+    /* flex: 1; */
+    height: max-content;
+    background-color: #ffffffcc;
+    border: 1.5px solid white;
+    padding: 10px ;
+    border-radius: 5px;
+   
+    
+}
+
+li{
+    list-style: none;
+}
+
+#input_logs{
+    
+    margin-bottom: 5px;
+    padding-inline: 10px;
+    border: 1.5px solid white;
+    border-radius: 5px;
+    background-color: rgba(255,255,255,0.8);
+}
+
+.odd{
+    background-color: rgb(255, 208, 215);
+    
+}
+
+.even{
+    background-color: rgb(251, 178, 189);
+}
+
+.message{
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    background-image: linear-gradient(0deg, #f093fb 0%, #f88b99 100%);
+    border:1.5px solid white;
+    border-radius: 5px;
+    color:white
+    
+}
+pre{
+    /* display: inline-block; */
+    
+    white-space: pre-wrap;
+
+}
+
